@@ -1,3 +1,3 @@
-# lightline-skkeleton
+# lightline-skk
 
-This plugin adds a lightline-component that displays the mode of skkeleton.
+This plugin adds a lightline-component that displays the mode of skk.
