@@ -7,10 +7,4 @@ if exists('g:loaded_lightline_skk')
 endif
 let g:loaded_lightline_skk = 1
 
-function! g:lightline#skkeleton() abort
-    return g:lightline#skkeleton#mode()
-endfunction
-
-function! g:lightline#eskk() abort
-    return g:lightline#eskk#mode()
-endfunction
+call g:lightline#skkeleton#mode()

@@ -2,6 +2,8 @@
 " Author: yasunori-kirin0418
 " License: MIT
 
+autocmd User skkeleton-mode-changed redrawstatus
+
 function! g:lightline#skkeleton#mode() abort
 
     if exists('g:loaded_skkeleton') == 0
