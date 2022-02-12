@@ -11,6 +11,7 @@ let g:lightline_skk_mode = {
     \ 'alphabet': 'Aa',
     \ }
 
+" Options for displaying SKK input modes.
 let g:lightline_skk_enable_mode = {
     \ 'INSERT': v:true,
     \ 'COMMAND': v:true,
