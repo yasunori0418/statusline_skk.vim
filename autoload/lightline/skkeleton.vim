@@ -11,24 +11,24 @@ let g:lightline_skk_mode = {
     \ 'alphabet': 'Aa',
     \ }
 
+function! g:lightline#skkeleton#_display() abort
+    if skkeleton#mode() ==# 'hira'
+        return g:lightline_skk_mode['hiragana']
+    elseif skkeleton#mode() ==# 'kata'
+        return g:lightline_skk_mode['katakana']
+    elseif skkeleton#mode() ==# 'hankata'
+        return g:lightline_skk_mode['hankaku-katakana']
+    elseif skkeleton#mode() ==# 'zenkaku'
+        return g:lightline_skk_mode['zenkaku-alphabet']
+    else
+        return g:lightline_skk_mode['alphabet']
+    endif
+endfunction
+
 function! g:lightline#skkeleton#mode() abort
 
-    if exists('g:loaded_skkeleton') == 0
-        return ''
-    endif
-
     if lightline#mode() ==# 'INSERT' || lightline#mode() ==# 'COMMAND'
-        if skkeleton#mode() ==# 'hira'
-            return g:lightline_skk_mode['hiragana']
-        elseif skkeleton#mode() ==# 'kata'
-            return g:lightline_skk_mode['katakana']
-        elseif skkeleton#mode() ==# 'hankata'
-            return g:lightline_skk_mode['hankaku-katakana']
-        elseif skkeleton#mode() ==# 'zenkaku'
-            return g:lightline_skk_mode['zenkaku-alphabet']
-        else
-            return g:lightline_skk_mode['alphabet']
-        endif
+        return g:lightline#skkeleton#_display()
     else
         return ''
     endif
