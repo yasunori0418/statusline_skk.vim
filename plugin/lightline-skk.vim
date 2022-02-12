@@ -7,6 +7,11 @@ if exists('g:loaded_lightline_skk')
 endif
 let g:loaded_lightline_skk = 1
 
+augroup lightline_skk
+    autocmd!
+    autocmd User skkeleton-mode-changed redrawstatus
+augroup END
+
 " Skk mode to display by default.
 let g:lightline_skk_mode = {
     \ 'hiragana': 'あぁ',
