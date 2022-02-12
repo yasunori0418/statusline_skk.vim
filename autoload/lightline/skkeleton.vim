@@ -3,7 +3,7 @@
 " License: MIT
 
 " Skk mode to display by default.
-let g:lightline_skk_mode = {
+let g:lightline_skk_display = {
     \ 'hiragana': 'あぁ',
     \ 'katakana': 'アァ',
     \ 'hankaku-katakana': 'ｱｧ',
@@ -20,15 +20,15 @@ let g:lightline_skk_enable_mode = {
 
 function! g:lightline#skkeleton#_display() abort
     if skkeleton#mode() ==# 'hira'
-        return g:lightline_skk_mode['hiragana']
+        return g:lightline_skk_display['hiragana']
     elseif skkeleton#mode() ==# 'kata'
-        return g:lightline_skk_mode['katakana']
+        return g:lightline_skk_display['katakana']
     elseif skkeleton#mode() ==# 'hankata'
-        return g:lightline_skk_mode['hankaku-katakana']
+        return g:lightline_skk_display['hankaku-katakana']
     elseif skkeleton#mode() ==# 'zenkaku'
-        return g:lightline_skk_mode['zenkaku-alphabet']
+        return g:lightline_skk_display['zenkaku-alphabet']
     else
-        return g:lightline_skk_mode['alphabet']
+        return g:lightline_skk_display['alphabet']
     endif
 endfunction
 
