@@ -11,6 +11,12 @@ let g:lightline_skk_mode = {
     \ 'alphabet': 'Aa',
     \ }
 
+let g:lightline_skk_enable_mode = {
+    \ 'INSERT': v:true,
+    \ 'COMMAND': v:true,
+    \ 'REPLACE': v:true,
+    \ }
+
 function! g:lightline#skkeleton#_display() abort
     if skkeleton#mode() ==# 'hira'
         return g:lightline_skk_mode['hiragana']
