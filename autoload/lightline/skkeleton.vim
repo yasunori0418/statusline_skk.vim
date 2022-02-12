@@ -27,7 +27,7 @@ endfunction
 
 function! g:lightline#skkeleton#mode() abort
 
-    if lightline#mode() ==# 'INSERT' || lightline#mode() ==# 'COMMAND'
+    if lightline#mode() ==# 'INSERT' || lightline#mode() ==# 'COMMAND' || lightline#mode() ==# 'REPLACE'
         return g:lightline#skkeleton#_display()
     else
         return ''
