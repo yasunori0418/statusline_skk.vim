@@ -4,6 +4,14 @@
 
 autocmd User skkeleton-mode-changed redrawstatus
 
+let g:lightline_skk_mode = {
+    \ 'hiragana': 'あぁ',
+    \ 'katakana': 'アァ',
+    \ 'hankaku-katakana': 'ｱｧ',
+    \ 'zenkaku-alphabet': 'Ａａ',
+    \ 'alphabet': 'Aa',
+    \ }
+
 function! g:lightline#skkeleton#mode() abort
 
     if exists('g:loaded_skkeleton') == 0
@@ -12,15 +20,15 @@ function! g:lightline#skkeleton#mode() abort
 
     if lightline#mode() ==# 'INSERT' || lightline#mode() ==# 'COMMAND'
         if skkeleton#mode() ==# 'hira'
-            return 'あぁ﫦'
+            return g:lightline_skk_mode.hiragana
         elseif skkeleton#mode() ==# 'kata'
-            return 'アァ﫦'
+            return g:lightline_skk_mode.katakana
         elseif skkeleton#mode() ==# 'hankata'
-            return 'ｱｧ﫦'
+            return g:lightline_skk_mode.hankaku-katakana
         elseif skkeleton#mode() ==# 'zenkaku'
-            return 'Ａａ﫦'
+            return g:lightline_skk_mode.zenkaku-alphabet
         else
-            return 'Aa﫦'
+            return g:lightline_skk_mode.alphabet
         endif
     else
         return ''
