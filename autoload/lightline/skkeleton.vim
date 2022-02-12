@@ -2,6 +2,14 @@
 " Author: yasunori-kirin0418
 " License: MIT
 
+" Skk mode to display by default.
+let g:lightline_skk_mode = {
+    \ 'hiragana': 'あぁ',
+    \ 'katakana': 'アァ',
+    \ 'hankaku-katakana': 'ｱｧ',
+    \ 'zenkaku-alphabet': 'Ａａ',
+    \ 'alphabet': 'Aa',
+    \ }
 
 function! g:lightline#skkeleton#mode() abort
 

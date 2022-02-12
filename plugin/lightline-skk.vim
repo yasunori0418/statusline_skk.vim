@@ -12,13 +12,4 @@ augroup lightline_skk
     autocmd User skkeleton-mode-changed redrawstatus
 augroup END
 
-" Skk mode to display by default.
-let g:lightline_skk_mode = {
-    \ 'hiragana': 'あぁ',
-    \ 'katakana': 'アァ',
-    \ 'hankaku-katakana': 'ｱｧ',
-    \ 'zenkaku-alphabet': 'Ａａ',
-    \ 'alphabet': 'Aa',
-    \ }
-
 call g:lightline#skkeleton#mode()
