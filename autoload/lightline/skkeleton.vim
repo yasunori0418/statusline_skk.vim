@@ -33,7 +33,11 @@ endfunction
 
 function! g:lightline#skkeleton#mode() abort
 
-    if lightline#mode() ==# 'INSERT' || lightline#mode() ==# 'COMMAND' || lightline#mode() ==# 'REPLACE'
+    if lightline#mode() ==# 'INSERT' && g:lightline_skk_enable_mode['INSERT']
+        return g:lightline#skkeleton#_display()
+    elseif lightline#mode() ==# 'COMMAND' && g:lightline_skk_enable_mode['COMMAND']
+        return g:lightline#skkeleton#_display()
+    elseif lightline#mode() ==# 'REPLACE' && g:lightline_skk_enable_mode['REPLACE']
         return g:lightline#skkeleton#_display()
     else
         return ''
