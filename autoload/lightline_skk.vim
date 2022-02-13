@@ -2,6 +2,22 @@
 " Author: yasunori-kirin0418
 " License: MIT
 
+" Skk mode to display by default.
+let g:lightline_skk_display = {
+    \ 'hiragana': 'あぁ',
+    \ 'katakana': 'アァ',
+    \ 'hankaku-katakana': 'ｱｧ',
+    \ 'zenkaku-alphabet': 'Ａａ',
+    \ 'alphabet': 'Aa',
+    \ }
+
+" Options for displaying SKK input modes.
+let g:lightline_skk_enable_mode = {
+    \ 'INSERT': v:true,
+    \ 'COMMAND': v:true,
+    \ 'REPLACE': v:true,
+    \ }
+
 " Function for changing options.
 " name == 'display' || 'enable_mode'
 function! g:lightline-skk#option(name, dict) abort
@@ -19,7 +35,7 @@ function! g:lightline-skk#option(name, dict) abort
 
 endfunction
 
-function! g:lightline_skk#_display() abort
+function! lightline_skk#_display() abort
     if skkeleton#mode() ==# 'hira'
         return g:lightline_skk_display['hiragana']
     elseif skkeleton#mode() ==# 'kata'
@@ -33,14 +49,18 @@ function! g:lightline_skk#_display() abort
     endif
 endfunction
 
-function! g:lightline_skk#mode() abort
+function! lightline_skk#mode() abort
+
+    if exists('g:loaded_skkeleton') == 0
+        return ''
+    endif
 
     if lightline#mode() ==# 'INSERT' && g:lightline_skk_enable_mode['INSERT']
-        return g:lightline_skk#_display()
+        return lightline_skk#_display()
     elseif lightline#mode() ==# 'COMMAND' && g:lightline_skk_enable_mode['COMMAND']
-        return g:lightline_skk#_display()
+        return lightline_skk#_display()
     elseif lightline#mode() ==# 'REPLACE' && g:lightline_skk_enable_mode['REPLACE']
-        return g:lightline_skk#_display()
+        return lightline_skk#_display()
     else
         return ''
     endif
