@@ -19,7 +19,7 @@ function! g:lightline-skk#option(name, dict) abort
 
 endfunction
 
-function! g:lightline#skkeleton#_display() abort
+function! g:lightline_skk#_display() abort
     if skkeleton#mode() ==# 'hira'
         return g:lightline_skk_display['hiragana']
     elseif skkeleton#mode() ==# 'kata'
@@ -36,11 +36,11 @@ endfunction
 function! g:lightline_skk#mode() abort
 
     if lightline#mode() ==# 'INSERT' && g:lightline_skk_enable_mode['INSERT']
-        return g:lightline#skkeleton#_display()
+        return g:lightline_skk#_display()
     elseif lightline#mode() ==# 'COMMAND' && g:lightline_skk_enable_mode['COMMAND']
-        return g:lightline#skkeleton#_display()
+        return g:lightline_skk#_display()
     elseif lightline#mode() ==# 'REPLACE' && g:lightline_skk_enable_mode['REPLACE']
-        return g:lightline#skkeleton#_display()
+        return g:lightline_skk#_display()
     else
         return ''
     endif
