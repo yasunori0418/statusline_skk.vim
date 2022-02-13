@@ -2,22 +2,6 @@
 " Author: yasunori-kirin0418
 " License: MIT
 
-" Skk mode to display by default.
-let g:lightline_skk_display = {
-    \ 'hiragana': 'あぁ',
-    \ 'katakana': 'アァ',
-    \ 'hankaku-katakana': 'ｱｧ',
-    \ 'zenkaku-alphabet': 'Ａａ',
-    \ 'alphabet': 'Aa',
-    \ }
-
-" Options for displaying SKK input modes.
-let g:lightline_skk_enable_mode = {
-    \ 'INSERT': v:true,
-    \ 'COMMAND': v:true,
-    \ 'REPLACE': v:true,
-    \ }
-
 function! g:lightline#skkeleton#_display() abort
     if skkeleton#mode() ==# 'hira'
         return g:lightline_skk_display['hiragana']
