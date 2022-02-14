@@ -20,7 +20,7 @@ let g:lightline_skk_enable_mode = {
 
 " Function for changing options.
 " name == 'display' || 'enable_mode'
-function! g:lightline-skk#option(name, dict) abort
+function! lightline_skk#option(name, dict) abort
 
     if a:name ==# 'display'
         for l:key in keys(a:dict)
