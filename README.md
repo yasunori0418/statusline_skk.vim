@@ -18,7 +18,7 @@ I'm using dein.vim.
 
 ```toml:lazy.toml
 [[plugins]]
-repo = yasunori-kirin0418/lightline_skk.vim
+repo = 'yasunori-kirin0418/lightline_skk.vim'
 on_source = 'skkeleton'
 ```
 
