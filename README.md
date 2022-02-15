@@ -17,9 +17,16 @@ REPLACE Mode
 ![REPLACE](https://user-images.githubusercontent.com/74786563/153974565-d276a074-9462-4170-a334-bcfc533db5b1.gif)
 
 
+### Similar projects
+
+If you are using Neovim, we also recommend the following projects:
+
+https://github.com/delphinus/skkeleton_indicator.nvim
+
+
 ## Install
 
-Obviously you need lightline.vim and skkeleton to use this plugin.
+Obviously you need [lightline.vim][1] and [skkeleton][2] to use this plugin.
 Use your favorite plugin manager for installation.
 I'm using dein.vim.
 
@@ -67,9 +74,6 @@ call lightline_skk#option('display', {
     \ })
 ```
 
-<!-- ここにも良い感じの動画をセット…… -->
-
-
 Anything that looks like this cursor can be used with fonts that contain NerdFont.
 
 ---
@@ -92,6 +96,14 @@ call lightline_skk#option('enable_mode', {
     \ })
 ```
 
-<!-- ここにも良い感じの動画をセット…… -->
-
 With the above settings, the conversion mode will not be displayed when in command mode.
+
+
+## Acknowledgments
+
+Thanks to the authors of lightline.vim and skkeleton.
+
+
+<!-- Links -->
+[1]: https://github.com/itchyny/lightline.vim
+[2]: https://github.com/vim-skk/skkeleton

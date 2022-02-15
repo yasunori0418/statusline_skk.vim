@@ -8,7 +8,6 @@
 動作や機能については、下の動画をご覧下さい。
 
 INSERT Mode
-<!-- この辺にlightline_skk.vimが動いている良い感じの動画を…… -->
 ![INSERT](https://user-images.githubusercontent.com/74786563/153974503-7dd17e3a-db6f-4a6d-b3c3-739f56c9a864.gif)
 
 COMMAND Mode
@@ -18,9 +17,16 @@ REPLACE Mode
 ![REPLACE](https://user-images.githubusercontent.com/74786563/153974565-d276a074-9462-4170-a334-bcfc533db5b1.gif)
 
 
+### 似たプロジェクト
+
+Neovimを使用しているなら、以下のプロジェクトもお勧めします。
+
+https://github.com/delphinus/skkeleton_indicator.nvim
+
+
 ## インストール
 
-このプラグインを使用するには当然ですが、lightline.vimとskkeleton必要です。
+このプラグインを使用するには当然ですが、[lightline.vim][1]と[skkeleton][2]必要です。
 インストールには、お好きなプラグインマネージャを使用してください。
 私はdein.vimを使っています。
 
@@ -68,9 +74,6 @@ call lightline_skk#option('display', {
     \ })
 ```
 
-<!-- ここにも良い感じの動画をセット…… -->
-
-
 このカーソルの様な見た目の物は、NerdFont入りのフォントなら使うことができます。
 
 ---
@@ -91,6 +94,14 @@ call lightline_skk#option('enable_mode', {
     \ })
 ```
 
-<!-- ここにも良い感じの動画をセット…… -->
-
 上記の設定では、コマンドモードのときに変換モードが表示されなくなります。
+
+
+## 謝辞
+
+lightline.vimとskkeletonの作者に感謝を申し上げます。
+
+
+<!-- Links -->
+[1]: https://github.com/itchyny/lightline.vim
+[2]: https://github.com/vim-skk/skkeleton
