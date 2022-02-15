@@ -7,7 +7,15 @@
 
 動作や機能については、下の動画をご覧下さい。
 
+INSERT Mode
 <!-- この辺にlightline_skk.vimが動いている良い感じの動画を…… -->
+![INSERT](https://user-images.githubusercontent.com/74786563/153974503-7dd17e3a-db6f-4a6d-b3c3-739f56c9a864.gif)
+
+COMMAND Mode
+![COMMAND](https://user-images.githubusercontent.com/74786563/153974556-71b5ce42-ed04-4225-9734-ca7ae4ca0648.gif)
+
+REPLACE Mode
+![REPLACE](https://user-images.githubusercontent.com/74786563/153974565-d276a074-9462-4170-a334-bcfc533db5b1.gif)
 
 
 ## インストール
