@@ -1,26 +1,8 @@
-*lightline_skk.txt*	日本語ヘルプ
+*lightline_skk.txt*	skkeletonの変換モードを表示するlightlineコンポーネント
 
-Version :
+Version : 1.0
 Author  : yasunori-kirin0418
-License : MIT license  {{{
-    Permission is hereby granted, free of charge, to any person obtaining
-    a copy of this software and associated documentation files (the
-    "Software"), to deal in the Software without restriction, including
-    without limitation the rights to use, copy, modify, merge, publish,
-    distribute, sublicense, and/or sell copies of the Software, and to
-    permit persons to whom the Software is furnished to do so, subject to
-    the following conditions:
-    The above copyright notice and this permission notice shall be included
-    in all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-}}}
+License : MIT license
 
 ==============================================================================
 目次						*lightline_skk-contents*
@@ -30,23 +12,41 @@ License : MIT license  {{{
 インターフェイス		|lightline_skk-interface|
   変数				  |lightline_skk-variables|
   関数				  |lightline_skk-functions|
-TODO				|lightline_skk-todo|
 更新履歴			|lightline_skk-changelog|
 
 
 ==============================================================================
 概要						*lightline_skk-introduction*
 
-*lightline_skk* は
+*lightline_skk* は|skkeleton|の変換モードを|lightline|に表示するため
+コンポーネントを追加するプラグインです。
 
 最新版:
 https://github.com/user/lightline_skk.vim
 
+|lightline|:
+https://github.com/itchyny/lightline.vim
+
+|skkeleton|:
+https://github.com/vim-skk/skkeleton
 
 ==============================================================================
 使い方						*lightline_skk-usage*
 
+*g:lightline_skk#mode()* を|lightline|の|component_function|に登録して、
+好きな場所に登録した|component_function|を配置してください。
 
+>
+	let g:lightline = {
+	\ 'active': {
+	\   'left': [ [ 'mode', 'paste', 'skk_mode' ],
+	\             [ 'readonly', 'filename', 'modifide' ] ]
+	\   },
+	\ 'component_function': {
+	\   'skk_mode': 'g:lightline_skk#mode',
+	\   },
+	\ }
+<
 
 ==============================================================================
 インターフェイス				*lightline_skk-interface*
@@ -55,11 +55,29 @@ https://github.com/user/lightline_skk.vim
 変数						*lightline_skk-variables*
 
 g:lightline_skk_display				*g:lightline_skk_display*
-	既定値: = { "hiragana": "あぁ", "katakana": "アァ", "hankaku-katakana": "ｱｧ", "zenkaku-alphabet": "Ａａ", "alphabet": "Aa", }
+
+	変換モードの表示内容を決めている変数です。
+	Note: この変数の値を変更する場合は*g:lightline_skk#option()*
+	で、{name}に`display`を使用してください。
+
+	既定値: = { "hiragana": "あぁ", 
+		    "katakana": "アァ", 
+		    "hankaku-katakana": "ｱｧ", 
+		    "zenkaku-alphabet": "Ａａ", 
+		    "alphabet": "Aa" }
 
 
 g:lightline_skk_enable_mode			*g:lightline_skk_enable_mode*
-	既定値: = { "INSERT": v:true, "COMMAND": v:true, "REPLACE": v:true, }
+
+	変換モードを表示するモードを決める変数です。
+	初期値では挿入・コマンド・置き換えで有効です。
+	無効にする場合はv:falseを指定してください。
+	Note: この変数の値を変更する場合は*g:lightline_skk#option()*
+	で、{name}に`enable_mode`を使用してください。
+
+	既定値: = { "INSERT": v:true, 
+		    "COMMAND": v:true, 
+		    "REPLACE": v:true }
 
 
 ------------------------------------------------------------------------------
@@ -67,13 +85,18 @@ g:lightline_skk_enable_mode			*g:lightline_skk_enable_mode*
 
 g:lightline_skk#mode()				*g:lightline_skk#mode()*
 
+	この関数を|lightline|の|component_function|に登録することで、
+	コンポーネントとして使用できます。
+	Note: |component_function|については、*g:lightline.component_function*
+	を確認してください。
+
 
 g:lightline_skk#option({name}, {dict})		*g:lightline_skk#option()*
 
-
-==============================================================================
-TODO						*lightline_skk-todo*
-
+	このプラグインの変数の値を変更するときに使用します。
+	{name}の値に`display`または`enable_mode`を指定します。
+	{dict}には変更するキーと値を辞書型で登録します。
+	Note: *lightline_skk-variables* を確認してください。
 
 
 ==============================================================================
