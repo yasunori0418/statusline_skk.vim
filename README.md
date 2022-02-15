@@ -99,6 +99,9 @@ call lightline_skk#option('enable_mode', {
 With the above settings, the conversion mode will not be displayed when in command mode.
 
 
+## License
+MIT
+
 ## Acknowledgments
 
 Thanks to the authors of lightline.vim and skkeleton.
