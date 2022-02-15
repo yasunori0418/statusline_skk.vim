@@ -55,8 +55,6 @@ See the lightline.vim README for detailed lightline.vim settings.
 
 ## Configuration
 
-<!-- ここにも良い感じの動画をセット…… -->
-
 To change the appearance of the conversion mode, do the following.
 
 ```vim:.vimrc
@@ -69,11 +67,12 @@ call lightline_skk#option('display', {
     \ })
 ```
 
+<!-- ここにも良い感じの動画をセット…… -->
+
+
 Anything that looks like this cursor can be used with fonts that contain NerdFont.
 
 ---
-
-<!-- ここにも良い感じの動画をセット…… -->
 
 The Vim mode in which the conversion mode is displayed is…
 
@@ -92,5 +91,7 @@ call lightline_skk#option('enable_mode', {
     \ 'REPLACE': v:true,
     \ })
 ```
+
+<!-- ここにも良い感じの動画をセット…… -->
 
 With the above settings, the conversion mode will not be displayed when in command mode.
