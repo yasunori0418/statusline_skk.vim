@@ -21,7 +21,7 @@ License : MIT license
 *lightline_skk* は|skkeleton|の変換モードを|lightline|に表示するため
 コンポーネントを追加するプラグインです。
 
-最新版:
+リポジトリ:
 https://github.com/user/lightline_skk.vim
 
 |lightline|:
@@ -60,10 +60,10 @@ g:lightline_skk_display				*g:lightline_skk_display*
 	Note: この変数の値を変更する場合は*g:lightline_skk#option()*
 	で、{name}に`display`を使用してください。
 
-	既定値: = { "hiragana": "あぁ", 
-		    "katakana": "アァ", 
-		    "hankaku-katakana": "ｱｧ", 
-		    "zenkaku-alphabet": "Ａａ", 
+	既定値: = { "hiragana": "あぁ",
+		    "katakana": "アァ",
+		    "hankaku-katakana": "ｱｧ",
+		    "zenkaku-alphabet": "Ａａ",
 		    "alphabet": "Aa" }
 
 
@@ -75,8 +75,8 @@ g:lightline_skk_enable_mode			*g:lightline_skk_enable_mode*
 	Note: この変数の値を変更する場合は*g:lightline_skk#option()*
 	で、{name}に`enable_mode`を使用してください。
 
-	既定値: = { "INSERT": v:true, 
-		    "COMMAND": v:true, 
+	既定値: = { "INSERT": v:true,
+		    "COMMAND": v:true,
 		    "REPLACE": v:true }
 
 
