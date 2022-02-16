@@ -97,6 +97,9 @@ call lightline_skk#option('enable_mode', {
 上記の設定では、コマンドモードのときに変換モードが表示されなくなります。
 
 
+## ライセンス
+MIT
+
 ## 謝辞
 
 lightline.vimとskkeletonの作者に感謝を申し上げます。
