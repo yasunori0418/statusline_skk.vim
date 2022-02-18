@@ -33,7 +33,7 @@ https://github.com/vim-skk/skkeleton
 ==============================================================================
 使い方						*lightline_skk-usage*
 
-*g:lightline_skk#mode()* を|lightline|の|component_function|に登録して、
+|g:lightline_skk#mode()| を|lightline|の|component_function|に登録して、
 好きな場所に登録した|component_function|を配置してください。
 
 >
@@ -57,7 +57,7 @@ https://github.com/vim-skk/skkeleton
 g:lightline_skk_display				*g:lightline_skk_display*
 
 	変換モードの表示内容を決めている変数です。
-	Note: この変数の値を変更する場合は*g:lightline_skk#option()*
+	Note: この変数の値を変更する場合は|g:lightline_skk#option()|
 	で、{name}に`display`を使用してください。
 
 	既定値: = { "hiragana": "あぁ",
@@ -72,7 +72,7 @@ g:lightline_skk_enable_mode			*g:lightline_skk_enable_mode*
 	変換モードを表示するモードを決める変数です。
 	初期値では挿入・コマンド・置き換えで有効です。
 	無効にする場合はv:falseを指定してください。
-	Note: この変数の値を変更する場合は*g:lightline_skk#option()*
+	Note: この変数の値を変更する場合は|g:lightline_skk#option()|
 	で、{name}に`enable_mode`を使用してください。
 
 	既定値: = { "INSERT": v:true,
@@ -96,7 +96,7 @@ g:lightline_skk#option({name}, {dict})		*g:lightline_skk#option()*
 	このプラグインの変数の値を変更するときに使用します。
 	{name}の値に`display`または`enable_mode`を指定します。
 	{dict}には変更するキーと値を辞書型で登録します。
-	Note: *lightline_skk-variables* を確認してください。
+	Note: |lightline_skk-variables| を確認してください。
 
 
 ==============================================================================
