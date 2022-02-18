@@ -87,7 +87,7 @@ g:lightline_skk#mode()				*g:lightline_skk#mode()*
 
 	この関数を|lightline|の|component_function|に登録することで、
 	コンポーネントとして使用できます。
-	Note: |component_function|については、*g:lightline.component_function*
+	Note: |component_function|については、|g:lightline.component_function|
 	を確認してください。
 
 
