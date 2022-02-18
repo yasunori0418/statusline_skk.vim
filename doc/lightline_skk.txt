@@ -88,7 +88,7 @@ g:lightline_skk#mode()				*g:lightline_skk#mode()*
 
 	You can use this function as a component by registering it
 	in the |component_function| of |lightline|.
-	Note: For |component_function|, check *g:lightline.component_function* .
+	Note: For |component_function|, check |g:lightline.component_function| .
 
 
 g:lightline_skk#option({name}, {dict})		*g:lightline_skk#option()*
