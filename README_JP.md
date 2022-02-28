@@ -13,8 +13,10 @@ INSERT Mode
 COMMAND Mode
 ![COMMAND](https://user-images.githubusercontent.com/74786563/153974556-71b5ce42-ed04-4225-9734-ca7ae4ca0648.gif)
 
+<!--
 REPLACE Mode
 ![REPLACE](https://user-images.githubusercontent.com/74786563/153974565-d276a074-9462-4170-a334-bcfc533db5b1.gif)
+-->
 
 
 ### 似たプロジェクト
@@ -96,6 +98,8 @@ call lightline_skk#option('enable_mode', {
 
 上記の設定では、コマンドモードのときに変換モードが表示されなくなります。
 
+Note: 現在、skkeletonではReplaceモードは使用できません。
+特別設定しなくても、問題ありません。
 
 ## ライセンス
 MIT
