@@ -13,9 +13,10 @@ INSERT Mode
 COMMAND Mode
 ![COMMAND](https://user-images.githubusercontent.com/74786563/153974556-71b5ce42-ed04-4225-9734-ca7ae4ca0648.gif)
 
+<!--
 REPLACE Mode
 ![REPLACE](https://user-images.githubusercontent.com/74786563/153974565-d276a074-9462-4170-a334-bcfc533db5b1.gif)
-
+-->
 
 ### Similar projects
 
@@ -36,6 +37,7 @@ repo = 'yasunori-kirin0418/lightline_skk.vim'
 on_source = 'skkeleton'
 ```
 
+Note: Currently, Replace mode is not available in skkeleton.
 
 ## Usage
 
@@ -98,6 +100,8 @@ call lightline_skk#option('enable_mode', {
 
 With the above settings, the conversion mode will not be displayed when in command mode.
 
+Note: Currently, Replace mode is not available in skkeleton.
+There is no problem even if you do not make any special settings.
 
 ## License
 MIT
