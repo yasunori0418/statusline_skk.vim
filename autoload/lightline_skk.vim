@@ -9,6 +9,7 @@ let g:lightline_skk_display = {
     \ 'hankaku-katakana': 'ｱｧ',
     \ 'zenkaku-alphabet': 'Ａａ',
     \ 'alphabet': 'Aa',
+    \ 'abbrev': 'abbrev',
     \ }
 
 " Options for displaying SKK input modes.
@@ -44,6 +45,8 @@ function! g:lightline_skk#_display() abort
         return g:lightline_skk_display['hankaku-katakana']
     elseif skkeleton#mode() ==# 'zenkaku'
         return g:lightline_skk_display['zenkaku-alphabet']
+    elseif skkeleton#mode() ==# 'abbrev'
+        return g:lightline_skk_display['abbrev']
     else
         return g:lightline_skk_display['alphabet']
     endif
