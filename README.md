@@ -47,7 +47,7 @@ I wrote the sample code below.
 let g:lightline = {
     \ 'active': {
     \   'left': [ [ 'mode', 'paste', 'skk_mode' ],
-    \             [ 'readonly', 'filename', 'modifide' ] ]
+    \             [ 'readonly', 'filename', 'modified' ] ]
     \   },
     \ 'component_function': {
     \   'skk_mode': 'g:lightline_skk#mode',
