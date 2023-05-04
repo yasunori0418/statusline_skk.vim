@@ -62,8 +62,8 @@ g:lightline_skk_display				*g:lightline_skk_display*
 
 	既定値: = { "hiragana": "あぁ",
 		    "katakana": "アァ",
-		    "hankaku-katakana": "ｱｧ",
-		    "zenkaku-alphabet": "Ａａ",
+		    "hankaku_katakana": "ｱｧ",
+		    "zenkaku_alphabet": "Ａａ",
 		    "abbrev": "abbrev",
 		    "alphabet": "Aa" }
 
@@ -104,6 +104,9 @@ g:lightline_skk#option({name}, {dict})		*g:lightline_skk#option()*
 ==============================================================================
 更新履歴					*lightline_skk-changelog*
 
+2023/05/04	表示モードのキーをケバブケースからスネークケースに変更しました。
+		hankaku-katakana -> hankaku_katakana
+		zenkaku-alphabet -> zenkaku_alphabet
 2022/04/30	abbrevモードに対応しました。
 
 ==============================================================================
