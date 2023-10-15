@@ -8,13 +8,9 @@ endif
 let g:loaded_lightline_skk = 1
 
 function! s:announce() abort
-  if !exists('g:lightline_skk_annouce')
+  if !exists('g:lightline_skk_announce')
     echohl WarningMsg
-    echomsg 'lightline_skk.vimはlightline.vim前提のプラグインではなくなります。'
-    echomsg '仕様変更に伴ない、プラグイン名はstatusline_skk.vimに変更予定です。'
-    echomsg 'lightline.vimで使い続ける場合は、tagを"lightline"に変更してください。'
-    echomsg '詳細に関しては、GitHubのプラグインページを確認してください。'
-    echomsg 'https://github.com/yasunori0418/lightline_skk.vim'
+    echomsg '[lightline_skk.vim] 仕様変更のお知らせ: https://github.com/yasunori0418/lightline_skk.vim'
     echohl None
   endif
 endfunction
