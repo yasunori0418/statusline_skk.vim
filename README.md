@@ -1,4 +1,4 @@
-# lightline_skk.vim
+# statusline_skk.vim
 
 This plugin adds a lightline-component that displays the conversion mode of skkeleton.
 
@@ -42,7 +42,7 @@ I'm using dein.vim.
 
 ```toml:lazy.toml
 [[plugins]]
-repo = 'yasunori0418/lightline_skk.vim'
+repo = 'yasunori0418/statusline_skk.vim'
 on_source = 'skkeleton'
 ```
 
@@ -59,12 +59,12 @@ let g:lightline = {
   \             [ 'readonly', 'filename', 'modified' ] ]
   \   },
   \ 'component_function': {
-  \   'skk_mode': 'g:lightline_skk#mode',
+  \   'skk_mode': 'statusline_skk#mode',
   \   },
   \ }
 ```
 
-To use this plugin, register `g: lightline_skk # mode` in `component_function` of lightline.vim.
+To use this plugin, register `statusline_skk#mode` in `component_function` of lightline.vim.
 Place the registered component anywhere you like and use it.
 Here, it is placed in the component set on the left.
 
@@ -75,7 +75,7 @@ See the lightline.vim README for detailed lightline.vim settings.
 To change the appearance of the conversion mode, do the following.
 
 ```vim:.vimrc
-call lightline_skk#option('display', {
+call statusline_skk#option('display', {
   \ 'hiragana': 'あぁ󰗧',
   \ 'katakana': 'アァ󰗧',
   \ 'hankaku-katakana': 'ｱｧ󰗧',
@@ -92,17 +92,15 @@ The Vim mode in which the conversion mode is displayed is…
 
 - Insert
 - Command
-- Replace
 
 Currently, using skkeleton in these modes will show the conversion mode.
 You may not want to see the conversion mode of skkeleton in some modes.
 The following settings are effective in such cases.
 
 ```vim:.vimrc
-call lightline_skk#option('enable_mode', {
+call statusline_skk#option('enable_mode', {
     \ 'INSERT': v:true,
     \ 'COMMAND': v:false,
-    \ 'REPLACE': v:true,
     \ })
 ```
 
@@ -118,8 +116,7 @@ MIT
 
 ## Acknowledgments
 
-Thanks to the authors of lightline.vim and skkeleton.
+Thanks to the authors of skkeleton.
 
 <!-- Links -->
-[1]: https://github.com/itchyny/lightline.vim
 [2]: https://github.com/vim-skk/skkeleton

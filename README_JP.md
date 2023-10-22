@@ -1,4 +1,4 @@
-# lightline_skk.vim
+# statusline_skk.vim
 
 このプラグインは、skkeletonの変換モードを表示するlightlineコンポーネントを追加します。
 
@@ -42,7 +42,7 @@ Neovimを使用しているなら、次のプロジェクトもお勧めしま�
 
 ```toml:lazy.toml
 [[plugins]]
-repo = 'yasunori0418/lightline_skk.vim'
+repo = 'yasunori0418/statusline_skk.vim'
 on_source = 'skkeleton'
 ```
 
@@ -57,12 +57,12 @@ let g:lightline = {
   \             [ 'readonly', 'filename', 'modified' ] ]
   \   },
   \ 'component_function': {
-  \   'skk_mode': 'g:lightline_skk#mode',
+  \   'skk_mode': 'statusline_skk#mode',
   \   },
   \ }
 ```
 
-このプラグインを使用するには、lightline.vimの`component_function`に`g:lightline_skk#mode`を登録します。
+このプラグインを使用するには、lightline.vimの`component_function`に`statusline_skk#mode`を登録します。
 登録したコンポーネントを好きな場所に配置して使用してください。
 ここでは左のコンポーネント集合に配置しました。
 
@@ -73,7 +73,7 @@ let g:lightline = {
 変換モードの見た目を変えるなら、次のようにします。
 
 ```vim:.vimrc
-call lightline_skk#option('display', {
+call statusline_skk#option('display', {
   \ 'hiragana': 'あぁ󰗧',
   \ 'katakana': 'アァ󰗧',
   \ 'hankaku-katakana': 'ｱｧ󰗧',
@@ -97,7 +97,7 @@ call lightline_skk#option('display', {
 次の設定は、そういうときに有効です。
 
 ```vim:.vimrc
-call lightline_skk#option('enable_mode', {
+call statusline_skk#option('enable_mode', {
   \ 'COMMAND': v:false,
   \ })
 ```
@@ -114,8 +114,7 @@ MIT
 
 ## 謝辞
 
-lightline.vimとskkeletonの作者に感謝を申し上げます。
+skkeletonの作者に感謝を申し上げます。
 
 <!-- Links -->
-[1]: https://github.com/itchyny/lightline.vim
 [2]: https://github.com/vim-skk/skkeleton
