@@ -53,11 +53,11 @@ function! statusline_skk#mode() abort
   if exists('g:loaded_skkeleton') == 0
     return ''
   endif
-  if lightline#mode() ==# 'INSERT' && g:statusline_skk_enable_mode['INSERT']
+  if mode(v:true) ==# 'i' && g:statusline_skk_enable_mode['INSERT']
     return statusline_skk#_display()
-  elseif lightline#mode() ==# 'COMMAND' && g:statusline_skk_enable_mode['COMMAND']
+  elseif mode(v:true) ==# 'c' && g:statusline_skk_enable_mode['COMMAND']
     return g:statusline_skk#_display()
-  elseif lightline#mode() ==# 'REPLACE' && g:statusline_skk_enable_mode['REPLACE']
+  elseif mode(v:true) ==# 'R' && g:statusline_skk_enable_mode['REPLACE']
     return statusline_skk#_display()
   else
     return ''
