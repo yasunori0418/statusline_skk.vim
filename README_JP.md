@@ -2,7 +2,6 @@
 
 このプラグインは、skkeletonの変換モードを表示するlightlineコンポーネントを追加します。
 
-
 ## 特徴
 
 動作や機能については、下の動画をご覧下さい。
@@ -18,13 +17,11 @@ REPLACE Mode
 ![REPLACE](https://user-images.githubusercontent.com/74786563/153974565-d276a074-9462-4170-a334-bcfc533db5b1.gif)
 -->
 
-
 ### 似たプロジェクト
 
 Neovimを使用しているなら、以下のプロジェクトもお勧めします。
 
-https://github.com/delphinus/skkeleton_indicator.nvim
-
+[delphinus/skkeleton_indicator.nvim](https://github.com/delphinus/skkeleton_indicator.nvim)
 
 ## インストール
 
@@ -37,7 +34,6 @@ https://github.com/delphinus/skkeleton_indicator.nvim
 repo = 'yasunori-kirin0418/lightline_skk.vim'
 on_source = 'skkeleton'
 ```
-
 
 ## 使い方
 
@@ -60,7 +56,6 @@ let g:lightline = {
 ここでは左のコンポーネント集合に配置しました。
 
 詳しいlightline.vimの設定は、lightline.vimのREADMEをご覧下さい。
-
 
 ## 設定
 
@@ -102,12 +97,12 @@ Note: 現在、skkeletonではReplaceモードは使用できません。
 特別設定しなくても、問題ありません。
 
 ## ライセンス
+
 MIT
 
 ## 謝辞
 
 lightline.vimとskkeletonの作者に感謝を申し上げます。
-
 
 <!-- Links -->
 [1]: https://github.com/itchyny/lightline.vim
