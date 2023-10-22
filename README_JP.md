@@ -2,6 +2,17 @@
 
 このプラグインは、skkeletonの変換モードを表示するlightlineコンポーネントを追加します。
 
+> [!WARNING]
+> このプラグインの名前は、11月に`statusline_skk.vim`へ変更予定です。
+> 名前の変更に伴ない、lightline.vim前提のプラグインではなくなります。
+> 関数名などの破壊的変更があるので、`lightline`タグへ固定することをお勧めします。
+> また最新の状態では、リポジトリへの案内用のアナウンスメッセージが表示されます。
+> アナウンスメッセージをオフにする場合、次のコードを`.vimrc`などに追記してください。
+
+```vim
+let g:lightline_skk_announce = v:true
+```
+
 ## 特徴
 
 動作や機能については、下の動画をご覧下さい。
@@ -19,7 +30,7 @@ REPLACE Mode
 
 ### 似たプロジェクト
 
-Neovimを使用しているなら、以下のプロジェクトもお勧めします。
+Neovimを使用しているなら、次のプロジェクトもお勧めします。
 
 [delphinus/skkeleton_indicator.nvim](https://github.com/delphinus/skkeleton_indicator.nvim)
 
@@ -37,18 +48,18 @@ on_source = 'skkeleton'
 
 ## 使い方
 
-以下にサンプルコードを書きました。
+次にサンプルコードを書きました。
 
 ```vim:.vimrc
 let g:lightline = {
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste', 'skk_mode' ],
-    \             [ 'readonly', 'filename', 'modified' ] ]
-    \   },
-    \ 'component_function': {
-    \   'skk_mode': 'g:lightline_skk#mode',
-    \   },
-    \ }
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste', 'skk_mode' ],
+  \             [ 'readonly', 'filename', 'modified' ] ]
+  \   },
+  \ 'component_function': {
+  \   'skk_mode': 'g:lightline_skk#mode',
+  \   },
+  \ }
 ```
 
 このプラグインを使用するには、lightline.vimの`component_function`に`g:lightline_skk#mode`を登録します。
@@ -59,23 +70,23 @@ let g:lightline = {
 
 ## 設定
 
-変換モードの見た目を変えるなら、以下の様にします。
+変換モードの見た目を変えるなら、次のようにします。
 
 ```vim:.vimrc
 call lightline_skk#option('display', {
-    \ 'hiragana': 'あぁ﫦',
-    \ 'katakana': 'アァ﫦',
-    \ 'hankaku-katakana': 'ｱｧ﫦',
-    \ 'zenkaku-alphabet': 'Ａａ﫦',
-    \ 'alphabet': 'Aa﫦',
-    \ })
+  \ 'hiragana': 'あぁ󰗧',
+  \ 'katakana': 'アァ󰗧',
+  \ 'hankaku-katakana': 'ｱｧ󰗧',
+  \ 'zenkaku-alphabet': 'Ａａ󰗧',
+  \ 'alphabet': 'Aa󰗧',
+  \ })
 ```
 
-このカーソルの様な見た目の物は、NerdFont入りのフォントなら使うことができます。
+このカーソルのような見た目の物は、NerdFont入りのフォントなら使うことができます。
 
 ---
 
-変換モードが表示されるVimのモードは、
+変換モードが表示されるVimのモードは、次のとおりです。
 
 - Insert
 - Command
@@ -83,18 +94,19 @@ call lightline_skk#option('display', {
 
 現在、これらのモードでskkeletonを使用すると、変換モードが表示されるようになっています。
 一部モードで、skkeletonの変換モードを表示して欲しくないときがあるかもしれません。
-以下の設定は、そういうときに有効です。
+次の設定は、そういうときに有効です。
 
 ```vim:.vimrc
 call lightline_skk#option('enable_mode', {
-    \ 'COMMAND': v:false,
-    \ })
+  \ 'COMMAND': v:false,
+  \ })
 ```
 
 上記の設定では、コマンドモードのときに変換モードが表示されなくなります。
 
-Note: 現在、skkeletonではReplaceモードは使用できません。
-特別設定しなくても、問題ありません。
+> [!NOTE]
+> 現在、skkeletonではReplaceモードは使用できません。
+> 特別設定しなくても、問題ありません。
 
 ## ライセンス
 
