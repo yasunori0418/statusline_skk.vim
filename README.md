@@ -2,17 +2,6 @@
 
 This plugin adds a lightline-component that displays the conversion mode of skkeleton.
 
-> [!WARNING]
-> The name of this plugin will be changed to `statusline_skk.vim` in November.
-> Due to the name change, it is no longer a plugin that requires lightline.vim.
-> Since there are breaking changes such as function names, it is recommended to fix it to the `lightline` tag.
-> Also, in the latest state, an announcement message will be displayed to guide you to the repository.
-> If you want to turn off announcement messages, add the following code to `.vimrc` etc.
-
-```vim
-let g:lightline_skk_announce = v:true
-```
-
 ## Feature
 
 Please see the video below for the operation and functions.
@@ -23,11 +12,6 @@ INSERT Mode
 COMMAND Mode
 ![COMMAND](https://user-images.githubusercontent.com/74786563/153974556-71b5ce42-ed04-4225-9734-ca7ae4ca0648.gif)
 
-<!--
-REPLACE Mode
-![REPLACE](https://user-images.githubusercontent.com/74786563/153974565-d276a074-9462-4170-a334-bcfc533db5b1.gif)
--->
-
 ### Similar projects
 
 If you are using Neovim, we also recommend the following projects:
@@ -36,7 +20,7 @@ https://github.com/delphinus/skkeleton_indicator.nvim
 
 ## Install
 
-Obviously you need [lightline.vim][1] and [skkeleton][2] to use this plugin.
+Obviously you need [skkeleton][1] to use this plugin.
 Use your favorite plugin manager for installation.
 I'm using dein.vim.
 
@@ -46,11 +30,9 @@ repo = 'yasunori0418/statusline_skk.vim'
 on_source = 'skkeleton'
 ```
 
-Note: Currently, Replace mode is not available in skkeleton.
-
 ## Usage
 
-I wrote the sample code below.
+Next, I wrote a sample code.
 
 ```vim:.vimrc
 let g:lightline = {
@@ -64,7 +46,7 @@ let g:lightline = {
   \ }
 ```
 
-To use this plugin, register `statusline_skk#mode` in `component_function` of lightline.vim.
+Register `statusline_skk#mode` in `component_function` when using this plugin with lightline.vim.
 Place the registered component anywhere you like and use it.
 Here, it is placed in the component set on the left.
 
@@ -106,10 +88,6 @@ call statusline_skk#option('enable_mode', {
 
 With the above settings, the conversion mode will not be displayed when in command mode.
 
-> [!Note]
-> Currently, Replace mode is not available in skkeleton.
-> There is no problem even if you do not make any special settings.
-
 ## License
 
 MIT
@@ -119,4 +97,4 @@ MIT
 Thanks to the authors of skkeleton.
 
 <!-- Links -->
-[2]: https://github.com/vim-skk/skkeleton
+[1]: https://github.com/vim-skk/skkeleton
