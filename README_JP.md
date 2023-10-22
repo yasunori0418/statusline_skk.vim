@@ -42,7 +42,7 @@ Neovimを使用しているなら、次のプロジェクトもお勧めしま�
 
 ```toml:lazy.toml
 [[plugins]]
-repo = 'yasunori-kirin0418/lightline_skk.vim'
+repo = 'yasunori0418/lightline_skk.vim'
 on_source = 'skkeleton'
 ```
 

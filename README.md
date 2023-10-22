@@ -2,6 +2,16 @@
 
 This plugin adds a lightline-component that displays the conversion mode of skkeleton.
 
+> [!WARNING]
+> The name of this plugin will be changed to `statusline_skk.vim` in November.
+> Due to the name change, it is no longer a plugin that requires lightline.vim.
+> Since there are breaking changes such as function names, it is recommended to fix it to the `lightline` tag.
+> Also, in the latest state, an announcement message will be displayed to guide you to the repository.
+> If you want to turn off announcement messages, add the following code to `.vimrc` etc.
+
+```vim
+let g:lightline_skk_announce = v:true
+```
 
 ## Feature
 
@@ -24,7 +34,6 @@ If you are using Neovim, we also recommend the following projects:
 
 https://github.com/delphinus/skkeleton_indicator.nvim
 
-
 ## Install
 
 Obviously you need [lightline.vim][1] and [skkeleton][2] to use this plugin.
@@ -33,7 +42,7 @@ I'm using dein.vim.
 
 ```toml:lazy.toml
 [[plugins]]
-repo = 'yasunori-kirin0418/lightline_skk.vim'
+repo = 'yasunori0418/lightline_skk.vim'
 on_source = 'skkeleton'
 ```
 
@@ -45,22 +54,21 @@ I wrote the sample code below.
 
 ```vim:.vimrc
 let g:lightline = {
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste', 'skk_mode' ],
-    \             [ 'readonly', 'filename', 'modified' ] ]
-    \   },
-    \ 'component_function': {
-    \   'skk_mode': 'g:lightline_skk#mode',
-    \   },
-    \ }
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste', 'skk_mode' ],
+  \             [ 'readonly', 'filename', 'modified' ] ]
+  \   },
+  \ 'component_function': {
+  \   'skk_mode': 'g:lightline_skk#mode',
+  \   },
+  \ }
 ```
 
-To use this plugin, register `g: lightline_skk # mode` in` component_function` of lightline.vim.
-Place the registered component anywhere you like and use it. 
+To use this plugin, register `g: lightline_skk # mode` in `component_function` of lightline.vim.
+Place the registered component anywhere you like and use it.
 Here, it is placed in the component set on the left.
 
 See the lightline.vim README for detailed lightline.vim settings.
-
 
 ## Configuration
 
@@ -68,12 +76,12 @@ To change the appearance of the conversion mode, do the following.
 
 ```vim:.vimrc
 call lightline_skk#option('display', {
-    \ 'hiragana': 'あぁ﫦',
-    \ 'katakana': 'アァ﫦',
-    \ 'hankaku-katakana': 'ｱｧ﫦',
-    \ 'zenkaku-alphabet': 'Ａａ﫦',
-    \ 'alphabet': 'Aa﫦',
-    \ })
+  \ 'hiragana': 'あぁ󰗧',
+  \ 'katakana': 'アァ󰗧',
+  \ 'hankaku-katakana': 'ｱｧ󰗧',
+  \ 'zenkaku-alphabet': 'Ａａ󰗧',
+  \ 'alphabet': 'Aa󰗧',
+  \ })
 ```
 
 Anything that looks like this cursor can be used with fonts that contain NerdFont.
@@ -100,16 +108,17 @@ call lightline_skk#option('enable_mode', {
 
 With the above settings, the conversion mode will not be displayed when in command mode.
 
-Note: Currently, Replace mode is not available in skkeleton.
-There is no problem even if you do not make any special settings.
+> [!Note]
+> Currently, Replace mode is not available in skkeleton.
+> There is no problem even if you do not make any special settings.
 
 ## License
+
 MIT
 
 ## Acknowledgments
 
 Thanks to the authors of lightline.vim and skkeleton.
-
 
 <!-- Links -->
 [1]: https://github.com/itchyny/lightline.vim
