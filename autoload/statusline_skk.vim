@@ -16,7 +16,6 @@ let g:statusline_skk_display = {
 let g:statusline_skk_enable_mode = {
   \ 'INSERT': v:true,
   \ 'COMMAND': v:true,
-  \ 'REPLACE': v:true,
   \ }
 
 " Function for changing options.
@@ -56,8 +55,6 @@ function! statusline_skk#mode() abort
   if mode(v:true) ==# 'i' && g:statusline_skk_enable_mode['INSERT']
     return statusline_skk#_display()
   elseif mode(v:true) ==# 'c' && g:statusline_skk_enable_mode['COMMAND']
-    return g:statusline_skk#_display()
-  elseif mode(v:true) ==# 'R' && g:statusline_skk_enable_mode['REPLACE']
     return statusline_skk#_display()
   else
     return ''
