@@ -19,5 +19,4 @@ augroup lightline_skk
   autocmd!
   autocmd CursorHold * ++once call s:announce()
   autocmd User skkeleton-mode-changed redrawstatus
-  autocmd User skkeleton-initialize-pre call lightline#init() | call lightline#update()
 augroup END
