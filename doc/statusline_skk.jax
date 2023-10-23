@@ -1,39 +1,38 @@
-*lightline_skk.jax*	skkeletonの変換モードを表示するlightlineコンポーネント
+*statusline_skk.jax*	skkeletonの変換モードをstatuslineに表示する関数を追加します。
 
-Version : 1.0
-Author  : yasunori-kirin0418
+Version : 2.0
+Author  : yasunori0418
 License : MIT license
 
 ==============================================================================
-目次						*lightline_skk-contents*
+目次						*statusline_skk-contents*
 
-概要				|lightline_skk-introduction|
-使い方				|lightline_skk-usage|
-インターフェイス		|lightline_skk-interface|
-  変数				  |lightline_skk-variables|
-  関数				  |lightline_skk-functions|
-更新履歴			|lightline_skk-changelog|
+概要				|statusline_skk-introduction|
+使い方				|statusline_skk-usage|
+インターフェイス		|statusline_skk-interface|
+  変数				  |statusline_skk-variables|
+  関数				  |statusline_skk-functions|
+更新履歴			|statusline_skk-changelog|
 
 
 ==============================================================================
-概要						*lightline_skk-introduction*
+概要						*statusline_skk-introduction*
 
-*lightline_skk* は|skkeleton|の変換モードを|lightline|に表示するため
+*statusline_skk* は|skkeleton|の変換モードを|statusline|に表示するため
 コンポーネントを追加するプラグインです。
 
 リポジトリ:
-https://github.com/user/lightline_skk.vim
-
-|lightline|:
-https://github.com/itchyny/lightline.vim
+https://github.com/user/statusline_skk.vim
 
 |skkeleton|:
 https://github.com/vim-skk/skkeleton
 
 ==============================================================================
-使い方						*lightline_skk-usage*
+使い方					*statusline_skk-usages*
 
-|g:lightline_skk#mode()| を|lightline|の|component_function|に登録して、
+lightline.vimの場合			*statusline_skk-usage-lightline.vim*
+
+|statusline_skk#mode()| を|lightline|の|component_function|に登録して、
 好きな場所に登録した|component_function|を配置してください。
 
 >
@@ -43,21 +42,21 @@ https://github.com/vim-skk/skkeleton
 	\             [ 'readonly', 'filename', 'modified' ] ]
 	\   },
 	\ 'component_function': {
-	\   'skk_mode': 'g:lightline_skk#mode',
+	\   'skk_mode': 'statusline_skk#mode',
 	\   },
 	\ }
 <
 
 ==============================================================================
-インターフェイス				*lightline_skk-interface*
+インターフェイス				*statusline_skk-interface*
 
 ------------------------------------------------------------------------------
-変数						*lightline_skk-variables*
+変数						*statusline_skk-variables*
 
-g:lightline_skk_display				*g:lightline_skk_display*
+g:statusline_skk_display			*g:statusline_skk_display*
 
 	変換モードの表示内容を決めている変数です。
-	Note: この変数の値を変更する場合は|g:lightline_skk#option()|
+	Note: この変数の値を変更する場合は|g:statusline_skk#option()|
 	で、{name}に`display`を使用してください。
 
 	既定値: = { "hiragana": "あぁ",
@@ -68,45 +67,49 @@ g:lightline_skk_display				*g:lightline_skk_display*
 		    "alphabet": "Aa" }
 
 
-g:lightline_skk_enable_mode			*g:lightline_skk_enable_mode*
+g:statusline_skk_enable_mode			*g:statusline_skk_enable_mode*
 
 	変換モードを表示するモードを決める変数です。
 	初期値では挿入・コマンド・置き換えで有効です。
-	無効にする場合は |v:false| を指定してください。
-	Note: この変数の値を変更する場合は|g:lightline_skk#option()|
+	無効にする場合は|v:false|を指定してください。
+	Note: この変数の値を変更する場合は|statusline_skk#option()|
 	で、{name}に`enable_mode`を使用してください。
-	Note: 現在 |skkeleton| は置き換えモードのサポートをしていません。
+	Note: 現在|skkeleton|は置き換えモードのサポートをしていません。
 
 	既定値: = { "INSERT": v:true,
-		    "COMMAND": v:true,
-		    "REPLACE": v:true }
+		    "COMMAND": v:true}
 
 
 ------------------------------------------------------------------------------
-関数						*lightline_skk-functions*
+関数						*statusline_skk-functions*
 
-g:lightline_skk#mode()				*g:lightline_skk#mode()*
+statusline_skk#mode()				*statusline_skk#mode()*
 
-	この関数を|lightline|の|component_function|に登録することで、
-	コンポーネントとして使用できます。
-	Note: |component_function|については、|g:lightline.component_function|
+	NOTE:
+	|lightline|で使用する場合、この関数を|component_function|に
+	登録することで、コンポーネントとして使用できます。
+	|component_function|については、|lightline.component_function|
 	を確認してください。
 
 
-g:lightline_skk#option({name}, {dict})		*g:lightline_skk#option()*
+statusline_skk#option({name}, {dict})		*statusline_skk#option()*
 
 	このプラグインの変数の値を変更するときに使用します。
 	{name}の値に`display`または`enable_mode`を指定します。
 	{dict}には変更するキーと値を辞書型で登録します。
-	Note: |lightline_skk-variables| を確認してください。
+	Note: |statusline_skk-variables|を確認してください。
 
 
 ==============================================================================
-更新履歴					*lightline_skk-changelog*
+更新履歴					*statusline_skk-changelog*
+
+2023/11/01	lightline.vim前提のプラグインから|statusline|で使えるプラグインに
+		変更になりました。
 
 2023/05/04	表示モードのキーをケバブケースからスネークケースに変更しました。
 		hankaku-katakana -> hankaku_katakana
 		zenkaku-alphabet -> zenkaku_alphabet
+
 2022/04/30	abbrevモードに対応しました。
 
 ==============================================================================

@@ -1,11 +1,11 @@
-" lightline_skk.vim
+" statusline_skk.vim
 " Author: yasunori0418
 " License: MIT
 
-if exists('g:loaded_lightline_skk')
+if exists('g:loaded_statusline_skk')
   finish
 endif
-let g:loaded_lightline_skk = 1
+let g:loaded_statusline_skk = 1
 
 function! s:announce() abort
   if !exists('g:lightline_skk_announce')
@@ -15,9 +15,8 @@ function! s:announce() abort
   endif
 endfunction
 
-augroup lightline_skk
+augroup statusline_skk
   autocmd!
   autocmd CursorHold * ++once call s:announce()
   autocmd User skkeleton-mode-changed redrawstatus
-  autocmd User skkeleton-initialize-pre call lightline#init() | call lightline#update()
 augroup END
