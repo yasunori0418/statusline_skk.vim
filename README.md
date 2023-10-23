@@ -2,6 +2,17 @@
 
 This plugin adds a lightline-component that displays the conversion mode of skkeleton.
 
+> [!WARNING]
+> The name of this plugin will be changed to `statusline_skk.vim` in November.
+> Due to the name change, it is no longer a plugin that requires lightline.vim.
+> Since there are breaking changes such as function names, it is recommended to fix it to the `lightline` tag.
+> Also, in the latest state, an announcement message will be displayed to guide you to the repository.
+> If you want to turn off announcement messages, add the following code to `.vimrc` etc.
+
+```vim
+let g:lightline_skk_announce = v:true
+```
+
 ## Feature
 
 Please see the video below for the operation and functions.
